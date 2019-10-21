@@ -55,9 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //.url("https://api.imgur.com/3/gallery/hot/viral/day/0?showViral={{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}.")
         // most viral
         Request request = new Request.Builder()
-                .url("https://api.imgur.com/3/gallery/user/rising/0.json") // feed
-                .header("Authorization", "Client-ID" +ImgurAPI.client_id)
-                .header("User-Agent", "My Little App")
+                .url("https://api.imgur.com/3/gallery/user/rising") // feed
+                .header("Authorization", "Bearer " + LoginParameters.retrieveValues(getApplicationContext()).getAccess_token())
                 .build();
 
         httpClient.newCall(request).enqueue(new Callback() {
@@ -106,13 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void fetchData_MostViral() {
         httpClient = new OkHttpClient.Builder().build();
 
-        //.url("https://api.imgur.com/3/gallery/hot/viral/day/0?showViral={{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}.")
-        // most viral
         Request request = new Request.Builder()
-                .url("https://api.imgur.com/3/gallery/hot/viral/day/0?showViral=" +
-                        "{{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}.")
-                .header("Authorization", "Client-ID" +ImgurAPI.client_id)
-                .header("User-Agent", "My Little App")
+                .url("https://api.imgur.com/3/gallery/hot/viral/day")
+                .header("Authorization", "Client-ID " + ImgurAPI.client_id)
                 .build();
 
         httpClient.newCall(request).enqueue(new Callback() {

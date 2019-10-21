@@ -13,29 +13,29 @@
         android:id="@+id/mostViral"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:background="@color/colorPrimary"
         android:text="MostViral"
+        app:layout_constraintEnd_toStartOf="@+id/feed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/feed"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:background="@color/colorPrimary"
         android:text="Feed"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="@color/colorPrimary"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_of_photos"
         android:layout_width="match_parent"
-        android:layout_height="589dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/menu_global"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mostViral">
 
     </androidx.recyclerview.widget.RecyclerView>
 

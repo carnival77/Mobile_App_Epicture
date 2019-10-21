@@ -96,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         httpClient = new OkHttpClient.Builder().build();
         OAuth2Values values = LoginParameters.retrieveValues(this.getApplicationContext());
         Request request = new Request.Builder()
-                .url("https://api.imgur.com/3/account/stam0325/submissions/0")
+                .url("https://api.imgur.com/3/account/me/submissions")
                 .header("Authorization", "Bearer " + values.getAccess_token())
                 .build();
 
