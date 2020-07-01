@@ -11,10 +11,10 @@ The project’s functionalities are set out as follows:
 
 3. Display the photos put online by the user connected
 
-1) Uploaded photos in web
+* Uploaded photos in web
 ![Epicture_web](https://user-images.githubusercontent.com/52997401/86207056-af68c400-bba8-11ea-8d9f-ae8392cbfe14.png)
 
-2) same photos in mobile
+* 2) same photos in mobile
 
 ![Epicture_photo](https://user-images.githubusercontent.com/52997401/86207107-cdcebf80-bba8-11ea-9b40-332922922082.jpg)
 
